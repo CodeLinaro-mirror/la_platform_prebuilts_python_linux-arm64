@@ -36,12 +36,12 @@ prefix_real=$(installed_prefix "$0")
 # locations. Keep prefix & exec_prefix using their original values in case
 # they are referenced in other configure variables, to prevent double
 # substitution, issue #22140.
-prefix="/home/ccross_google_com/ndk-kokoro/out/python3/install"
+prefix="/build/out/python3/install"
 exec_prefix="${prefix}"
 exec_prefix_real=${prefix_real}
 includedir=$(echo "${prefix}/include" | sed "s#$prefix#$prefix_real#")
 libdir=$(echo "${exec_prefix}/lib" | sed "s#$prefix#$prefix_real#")
-CFLAGS=$(echo "-Wno-unused-command-line-argument --sysroot=/home/ccross_google_com/ndk-kokoro/prebuilts/build-tools/sysroots/aarch64-unknown-linux-musl --target=aarch64-unknown-linux-musl -stdlib=libc++" | sed "s#$prefix#$prefix_real#")
+CFLAGS=$(echo "-Wno-unused-command-line-argument --sysroot=/build/prebuilts/build-tools/sysroots/aarch64-unknown-linux-musl --target=aarch64-unknown-linux-musl -stdlib=libc++" | sed "s#$prefix#$prefix_real#")
 VERSION="3.13"
 LIBM="-lm"
 LIBC=""
