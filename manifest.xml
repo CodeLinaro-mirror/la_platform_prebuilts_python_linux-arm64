@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<manifest>
+  <remote name="aosp" fetch="https://android.googlesource.com/" review="https://android.googlesource.com/" />
+  <remote name="aospsuperproject" fetch="https://android.googlesource.com/" review="https://android.googlesource.com/" revision="ndk-kokoro-main" />
+  <default revision="master" remote="aosp" sync-j="4" />
+  <superproject name="platform/superproject" remote="aospsuperproject" />
+  <project path="external/bzip2" name="platform/external/bzip2" revision="8aa64d0cf768bd6c785ec00b7a8bd0aa58ee385b" />
+  <project path="external/libffi" name="platform/external/libffi" revision="8e872f4bcb876822fba686d7f483b91456e6ab1a" />
+  <project path="external/mpdecimal" name="platform/external/mpdecimal" revision="ed7ca08a5e74aab5f0c5a15cbc08f2364dbe69a3" />
+  <project path="external/ncurses" name="platform/external/ncurses" revision="f52d90dc5f989e833e9d6168691b51a6e322f7ff" />
+  <project path="external/python/cpython3" name="platform/external/python/cpython3" revision="20c3738752477da39dce309eb3083c2091f7b880" />
+  <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" revision="9c95027ed2ce2e97a35d597ed1012a6aecb80763" />
+  <project path="prebuilts/clang/host/linux-arm64" name="platform/prebuilts/clang/host/linux-arm64" revision="198cef08637a6133e98b4a80e36f0ca35775fa9a" />
+  <project path="prebuilts/python/linux-arm64" name="platform/prebuilts/python/linux-arm64" revision="e771c72074e9b17b6ccf15f8eee2755cac20dc27" />
+  <project path="toolchain/ndk-kokoro" name="toolchain/ndk-kokoro" revision="f71eb25ea79c56f54b3cdc0f319ac2e7f0efaf1b" />
+</manifest>
